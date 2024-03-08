@@ -28,5 +28,19 @@ header .logo{
     position: absolute;  /* 부모 요소 기준으로 배치하겠다. 근데 이걸 사용하려면 상위(inner) 부분에 포지션 값이 있어야 한다.*/
     top: 0;
     bottom: 0;  /* 위 아래 0 으로 설정 */
+    left: 0;  /*왼쪽에 붙어있다.*/
     margin: auto;  /* margin이라는 외부 여백 속성은 auto */
 }
+/* 
+위에서 로고를 다루는 모습에서 가운데에 정렬 하기 위해 필요한 것에는 뭐가 있을까
+1. 상위 클래스에서의 relative  (여기서는 inner)
+2. 사용할 클래스의 absolute      (여기서는 logo)
+3. top, bottom이 0
+4. height 로 높이 지정하기
+5. margin에 auto로 자동 계산
+
+만약 위 아래에서 가운데가 아닌 양옆에서 가운데가 되려면
+1. left, right 가 0
+2. margin에 auto 추가해야함. 하지만 auto auto 인 경우에는 생략
+3. width로 가로길이 정하기
+*/
